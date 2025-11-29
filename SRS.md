@@ -32,6 +32,7 @@
 Όλα ανταλλάσουν δεδομένα της μορφής JSON.
 
 Ακολουθεί το Component Diagram with External Interfaces:
+
 ![Component Diagram with External Interfaces](https://github.com/kifra404/SoftEngPhotos/blob/main/comp.png?raw=true)
 
 #### 1.2.2 User Interfaces
@@ -138,10 +139,12 @@
     Εμφανίζεται ενημερωτικού μηνύματος
 
 Ακολουθεί το Activity Diagram (σε 2 μέρη λόγω μεγάλου μεγέθους) για το UC1:
+
 ![UC1 Activity Diagram_1](https://github.com/kifra404/SoftEngPhotos/blob/main/act1.1.png?raw=true)
 ![UC1 Activity Diagram_2](https://github.com/kifra404/SoftEngPhotos/blob/main/act1.2.png?raw=true)
 
 Στη συνέχεια, ακολουθεί το Sequence Diagram για το UC1:
+
 ![UC1 Sequence Diagram](https://github.com/kifra404/SoftEngPhotos/blob/main/sec1.png?raw=true)
 
 ##### 3.1.1.6 Output data and postconditions
@@ -149,6 +152,7 @@
 - Αναλυτικά στοιχεία για τον φορτιστή που επιλέχθηκε
 
 Παρακάτω βρίσκεται το Sequence Diagram παραγωγής δεδομένων για το UC1:
+
 ![UC1 Sequence Diagram Out](https://github.com/kifra404/SoftEngPhotos/blob/main/sec1out.png?raw=true)
 
 ##### 3.1.1.7 Notes
@@ -214,7 +218,7 @@
 Ακολουθεί το Activity Diagram για το UC2:
 ![UC2 Activity Diagram_1](https://github.com/kifra404/SoftEngPhotos/blob/main/act2.png?raw=true)
 
-Στη συνέχεια, ακολουθεί το Sequence Diagram για το UC1:
+Στη συνέχεια, ακολουθεί το Sequence Diagram για το UC2:
 ![UC2 Sequence Diagram](https://github.com/kifra404/SoftEngPhotos/blob/main/sec2.png?raw=true)
 
 ##### 3.1.2.6 Output data and postconditions
@@ -295,6 +299,7 @@
     Εμφανίζεται μήνυμα “Unable to save payment method”
 
 Ακολουθεί το Activity Diagram (σε 2 μέρη λόγω μεγάλου μεγέθους) για το UC3:
+
 ![UC3 Activity Diagram_1](https://github.com/kifra404/SoftEngPhotos/blob/main/act3.1.png?raw=true)
 ![UC3 Activity Diagram_2](https://github.com/kifra404/SoftEngPhotos/blob/main/act3.2.png?raw=true)
 
@@ -306,6 +311,7 @@
 - Ενημερωμένος λογαριασμός (μόνο για registered users)
 
 Παρακάτω βρίσκεται το Sequence Diagram παραγωγής δεδομένων για το UC3:
+
 ![UC3 Sequence Diagram Out](https://github.com/kifra404/SoftEngPhotos/blob/main/seq3out.png?raw=true)
 
 ##### 3.1.3.7 Notes
@@ -338,6 +344,7 @@
 Το σύστημα πρέπει να μπορεί να συνεργάζεται με εξωτερικές υπηρεσίες, όπως πάροχοι πληρωμών ή συστήματα χαρτών.
 
 Τα παραπάνω ακολουθούν σχηματικά στο διάγραμμα λειτουργικών απαιτήσεων:
+
 ![UML Functional requirements diagram](https://github.com/kifra404/SoftEngPhotos/blob/main/leitourg_apaithseis.png?raw=true)
 
 ## 3.3 Performance requirements
