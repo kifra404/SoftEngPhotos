@@ -17,21 +17,7 @@
 
 Ακολουθεί το Block Diagram:
 
-@startuml
-rectangle "Customer" as C
-rectangle "Web/Mobile UI" as UI
-rectangle "Backend Services" as BE
-rectangle "Database" as DB
-rectangle "Payment Service" as PAY
-rectangle "External EV Info Systems" as EXT
-
-C --> UI
-UI --> BE
-BE --> DB
-BE --> PAY
-BE --> EXT
-@enduml
-
+![Block Diagram](https://github.com/kifra404/SoftEngPhotos/blob/main/block_d.png?raw=true)
 
 ### 1.2 Interfaces
 
@@ -46,7 +32,7 @@ BE --> EXT
 Όλα ανταλλάσουν δεδομένα της μορφής JSON.
 
 Ακολουθεί το Component Diagram with External Interfaces:
-
+![Component Diagram with External Interfaces](https://github.com/kifra404/SoftEngPhotos/blob/main/comp.png?raw=true)
 
 #### 1.2.2 User Interfaces
 Οι χρήστες (οδηγοί ηλεκτρικών οχημάτων και οι διαχειριστές) μπορούν να έχουν πρόσβαση με τις παρακάτω διεπαφές:
@@ -57,16 +43,27 @@ BE --> EXT
 Ακολουθούν τα βασικά wireframes της web εφαρμογής. Συκγκεκριμένα:
 - Η **αρχική οθόνη** που εμφανίζει τον χάρτη με τους διαθέσιμους φορτιστές και δίπλα μία λίστα με τους φορτιστές που προβάλλονται στον χάρτη εκείνη τη στιγμή με μερικές βασικές πληροφορίες (διεύθυνση, απόσταση, διαθέσιμοι φορτιστές και ωράριο λειτουργίας). Επίσης, βλέπουμε τη δυνατότητα αναζήτησης φορτιστή βάσει διεύθυνσης ή ΤΚ ή βάσει φίλτρων
 
+![Home Screen](https://github.com/kifra404/SoftEngPhotos/blob/main/Wireframe(1).png?raw=true)
+
 - Η **οθόνη επιλογής φορτιστή** που δείχνει τι συμβαίνει μόλις επιλέξει ο χρήστης τον φορτιστή που επιθυμεί. Του εμφανίζει περισσότερες λεπτομέρεις όπως ο τύπος φόρτισης, η τιμή ενέργειας εκείνη τη στιγμή και του δίνει δυνατότητα να κάνει κράτηση για όσο χρόνο θέλει (λιγότερο από 60 λεπτά) ή να ζητήσει οδηγίες πλοήγησης
+
+![Reserve charger](https://github.com/kifra404/SoftEngPhotos/blob/main/Wireframe(2).png?raw=true)
 
 - Η **οθόνη έναρξης συνεδρίας** που δίνει την επιλογή στον χρήστη να σκανάρει ένα QR ή να εισάγει τον μοναδικό κωδικό του φορτιστή για να αρχίσει να τον χρησιμοποιεί μόλις χρεωθεί το σχετικό ποσό
 
+![Use Charger](https://github.com/kifra404/SoftEngPhotos/blob/main/Wireframe(3).png?raw=true)
+
 - Η **οθόνη επιβεβαίωσης πληρωμής** που ρωτάει τον χρήστη αν θέλει να προχωρήσει στη δέσμευσει του ποσού που αναλογεί
+
+![Charger identified](https://github.com/kifra404/SoftEngPhotos/blob/main/Wireframe(4).png?raw=true)
 
 - Η **οθόνη εισαγωγής τρόπου πληρωμής**
 
+![Payment](https://github.com/kifra404/SoftEngPhotos/blob/main/Wireframe(5).png?raw=true)
+
 - Η **οθόνη επιτυχούς δέσμευσης ποσού** που δίνει στον χρήστη τη δυνατότητα να δει την πρόοδο της φόρτισης
 
+![Succesful Payment](https://github.com/kifra404/SoftEngPhotos/blob/main/Wireframe(6).png?raw=true)
 
 [- Flow between screens, etc.]
 
@@ -104,7 +101,8 @@ BE --> EXT
 - Συστήματα που εμπλέκονται:
     - Backend Server του παρόχου
     - DBMS φορτιστών
-[Wireframe and Flow?]
+
+![Home Screen](https://github.com/kifra404/SoftEngPhotos/blob/main/Wireframe(1).png?raw=true)
 
 ##### 3.1.1.4 Input data
 - Προσωπικά στοιχεία (email, password, όνομα) — μόνο για εγγεγραμμένους χρήστες
@@ -125,7 +123,6 @@ BE --> EXT
 5. Ο πελάτης επιλέγει έναν φορτιστή
 6. Το σύστημα εμφανίζει αναλυτικές πληροφορίες και τις τρέχουσες τιμές
 
-
 ###### Alternate flows
 - **Α1 – Η τοποθεσία δεν είναι διαθέσιμη**
     Το σύστημα ζητά χειροκίνητη εισαγωγή περιοχής
@@ -137,18 +134,22 @@ BE --> EXT
 - **Ε1 – Αποτυχία ανάκτησης δεδομένων**
     Εμφανίζεται μήνυμα σφάλματος
 
-
 - **Ε2 – Δεν υπάρχουν διαθέσιμοι φορτιστές**
     Εμφανίζεται ενημερωτικού μηνύματος
 
-[UML activity diagram]
-[UML sequence diagram]
+Ακολουθεί το Activity Diagram (σε 2 μέρη λόγω μεγάλου μεγέθους) για το UC1:
+![UC1 Activity Diagram_1](https://github.com/kifra404/SoftEngPhotos/blob/main/act1.1.png?raw=true)
+![UC1 Activity Diagram_2](https://github.com/kifra404/SoftEngPhotos/blob/main/act1.2.png?raw=true)
+
+Στη συνέχεια, ακολουθεί το Sequence Diagram για το UC1:
+![UC1 Sequence Diagram](https://github.com/kifra404/SoftEngPhotos/blob/main/sec1.png?raw=true)
 
 ##### 3.1.1.6 Output data and postconditions
 - Εμφάνιση διαθέσιμων φορτιστών και τιμών
 - Αναλυτικά στοιχεία για τον φορτιστή που επιλέχθηκε
 
-[UML sequence out diagram]
+Παρακάτω βρίσκεται το Sequence Diagram παραγωγής δεδομένων για το UC1:
+![UC1 Sequence Diagram Out](https://github.com/kifra404/SoftEngPhotos/blob/main/sec1out.png?raw=true)
 
 ##### 3.1.1.7 Notes
 Η τιμή (€/kWh) μεταβάλλεται δυναμικά και θα λαμβάνεται από API. Αλλάζει με βάση την ώρα, την τοποθεσία, κλπ.
@@ -171,7 +172,7 @@ BE --> EXT
     - Backend Server του παρόχου
     - DBMS φορτιστών και κρατήσεων
 
-[Wireframe and Flow?]
+![Reserve charger](https://github.com/kifra404/SoftEngPhotos/blob/main/Wireframe(2).png?raw=true)
 
 ##### 3.1.2.4 Input data
 - Επιλογή φορτιστή
@@ -196,32 +197,32 @@ BE --> EXT
     1. Ο πελάτης επιλέγει νέο χρόνο κράτησης πριν την οριστικοποίηση
     2. Το σύστημα ελέγχει ξανά την εγκυρότητα του χρόνου (≤60’)
 
-
 - **Α2 – Ο πελάτης ακυρώνει την κράτηση πριν ολοκληρωθεί**
     1. Ο πελάτης πατά “Ακύρωση”
     2. Η διαδικασία τερματίζεται χωρίς δημιουργία κράτησης
-
 
 #### Exception Flows
 - **Ε1 – Ο φορτιστής δεν είναι πλέον διαθέσιμος**
     Το σύστημα ενημερώνει τον χρήστη ότι η κράτηση δεν μπορεί να ολοκληρωθεί
 
-
 - **Ε2 – Ο χρόνος κράτησης υπερβαίνει το όριο**
     Το σύστημα εμφανίζει μήνυμα “Μέγιστος χρόνος κράτησης: 60 λεπτά”
-
 
 - **Ε3 – Αποτυχία backend κατά τη δημιουργία κράτησης**
     Το σύστημα εμφανίζει μήνυμα σφάλματος “Η κράτηση δεν μπόρεσε να ολοκληρωθεί”
 
-[UML activity diagram]
-[UML sequence diagram]
+Ακολουθεί το Activity Diagram για το UC2:
+![UC2 Activity Diagram_1](https://github.com/kifra404/SoftEngPhotos/blob/main/act2.png?raw=true)
+
+Στη συνέχεια, ακολουθεί το Sequence Diagram για το UC1:
+![UC2 Sequence Diagram](https://github.com/kifra404/SoftEngPhotos/blob/main/sec2.png?raw=true)
 
 ##### 3.1.2.6 Output data and postconditions
 - Κράτηση στη βάση δεδομένων (ID, created_at, expire_at, status, user_id, charger_id, session_id)
 - Εμφανιζόμενη επιβεβαίωση στον χρήστη
 
-[UML sequence out diagram]
+Παρακάτω βρίσκεται το Sequence Diagram παραγωγής δεδομένων για το UC2:
+![UC2 Sequence Diagram Out](https://github.com/kifra404/SoftEngPhotos/blob/main/sec2out.png?raw=true)
 
 ##### 3.1.2.7 Notes
 - Η κράτηση λήγει αυτόματα μετά τον προκαθορισμένο χρόνο
@@ -293,52 +294,113 @@ BE --> EXT
 - **E3 – Backend failure**
     Εμφανίζεται μήνυμα “Unable to save payment method”
 
-[UML activity diagram]
-[UML sequence diagram]
+Ακολουθεί το Activity Diagram (σε 2 μέρη λόγω μεγάλου μεγέθους) για το UC3:
+![UC3 Activity Diagram_1](https://github.com/kifra404/SoftEngPhotos/blob/main/act3.1.png?raw=true)
+![UC3 Activity Diagram_2](https://github.com/kifra404/SoftEngPhotos/blob/main/act3.2.png?raw=true)
+
+Στη συνέχεια, ακολουθεί το Sequence Diagram για το UC3:
+![UC3 Sequence Diagram](https://github.com/kifra404/SoftEngPhotos/blob/main/seq3.png?raw=true)
 
 ##### 3.1.3.6 Output data and postconditions
 - Νέο tokenized payment method (visitor ή registered user)
 - Ενημερωμένος λογαριασμός (μόνο για registered users)
 
-[UML sequence out diagram]
+Παρακάτω βρίσκεται το Sequence Diagram παραγωγής δεδομένων για το UC3:
+![UC3 Sequence Diagram Out](https://github.com/kifra404/SoftEngPhotos/blob/main/seq3out.png?raw=true)
 
 ##### 3.1.3.7 Notes
 - Η εφαρμογή ποτέ δεν αποθηκεύει στοιχεία κάρτας, μόνο tokens από τον Payment Provider
 - Οι visitors μπορούν να αποθηκεύουν payment methods για μελλοντική χρήση χωρίς λογαριασμό
 
 ## 3.2 Functional Requirements
-[  
-    - UML functional requirements diagram  
-    - short description of each requirement    
-]
+### Απαίτηση 1: Προβολή διαθέσιμων φορτιστών
+Το σύστημα πρέπει να επιτρέπει στον χρήστη να βλέπει τους διαθέσιμους φορτιστές σε μια περιοχή.
+
+### Απαίτηση 2: Προβολή τιμών και βασικών πληροφοριών
+Το σύστημα πρέπει να εμφανίζει τις τρέχουσες τιμές και τα βασικά χαρακτηριστικά κάθε φορτιστή.
+
+### Απαίτηση 3: Προβολή λεπτομερειών φορτιστή
+Ο χρήστης πρέπει να μπορεί να δει αναλυτικές πληροφορίες για έναν συγκεκριμένο φορτιστή.
+
+### Απαίτηση 4: Κράτηση φορτιστή
+Το σύστημα πρέπει να επιτρέπει τη δημιουργία κράτησης φορτιστή για συγκεκριμένο χρονικό διάστημα.
+
+### Απαίτηση 5: Έλεγχος διαθεσιμότητας φορτιστή
+Πριν ολοκληρωθεί μια κράτηση, το σύστημα πρέπει να επιβεβαιώνει ότι ο φορτιστής είναι διαθέσιμος.
+
+### Απαίτηση 6: Διαχείριση λογαριασμού χρήστη
+Οι χρήστες πρέπει να μπορούν να προβάλλουν και να ενημερώνουν τα προσωπικά στοιχεία του λογαριασμού τους.
+
+### Απαίτηση 7: Διαχείριση μεθόδων πληρωμής
+Το σύστημα πρέπει να επιτρέπει την προσθήκη, τροποποίηση και διαγραφή μεθόδων πληρωμής.
+
+### Απαίτηση 8: Επικοινωνία με εξωτερικά συστήματα
+Το σύστημα πρέπει να μπορεί να συνεργάζεται με εξωτερικές υπηρεσίες, όπως πάροχοι πληρωμών ή συστήματα χαρτών.
+
+Τα παραπάνω ακολουθούν σχηματικά στο διάγραμμα λειτουργικών απαιτήσεων:
+![UML Functional requirements diagram](https://github.com/kifra404/SoftEngPhotos/blob/main/leitourg_apaithseis.png?raw=true)
 
 ## 3.3 Performance requirements
-[  
-    - performance requirements and justification     
-]
+1. **Χρόνος απόκρισης:**  
+   - Ενέργειες χρήστη ≤ 3 δευτερόλεπτα
+   - REST API αιτήματα ≤ 2 δευτερόλεπτα (έως 5 δευτερόλεπτα για μεγάλα δεδομένα)
+
+2. **Διαθεσιμότητα:**  
+   - 99 % λειτουργία μηνιαίως  
+   - Προγραμματισμένη συντήρηση μόνο σε ώρες χαμηλής κίνησης
+
+3. **Επεκτασιμότητα:**  
+   - 500 ταυτόχρονοι χρήστες  
+   - 50 ταυτόχρονες συνεδρίες φόρτισης  
+   - Δυνατότητα οριζόντιας κλιμάκωσης
+
+4. **Πληρωμές:**  
+   - Ολοκλήρωση συναλλαγής ≤ 10 δευτερόλεπτα
 
 ## 3.4 Data requirements
 
 ### 3.4.1 Data access requirements
-[  
-    - sources, technologies protocols, authentication, whatever applies       
-]
+1. **Ασφαλής σύνδεση:** Όλα τα δεδομένα μεταφέρονται μέσω **HTTPS/TLS**.  
+2. **Έλεγχος ταυτότητας:** Πρόσβαση μόνο με **token (JWT/OAuth2)**.  
+3. **Ρόλοι:**  
+   - **Χρήστης:** βλέπει μόνο τα δικά του στοιχεία.  
+   - **Διαχειριστής:** πρόσβαση σε όλα τα λειτουργικά δεδομένα.  
+4. **Κρυπτογράφηση:** Προσωπικά & οικονομικά δεδομένα αποθηκεύονται **κρυπτογραφημένα**.  
+5. **Audit logs:** Καταγράφεται κάθε πρόσβαση ή αλλαγή.  
+6. **Περιορισμένα API:** Public, authenticated και admin επίπεδα πρόσβασης.  
+7. **GDPR συμμόρφωση:** Τήρηση προστασίας προσωπικών δεδομένων.
 
 ### 3.4.2 Semantic data model
-![ER](https://github.com/kifra404/SoftEngPhotos/blob/main/ER.png)
+Παρακάτω ακολουθεί το ER diagram που δημιουργήθηκε για τις απαιτήσεις της εφαρμογής:
+
+![ER](https://github.com/kifra404/SoftEngPhotos/blob/main/ER.png?raw=true)
 
 ## 3.5 Other requirements
-[  
-    - other non-functional requirements       
-]
 
 ### 3.5.1 Availability
-[  
-    - availability requirements and justification       
-]
+Το σύστημα πρέπει να είναι διαθέσιμο 24/7, ώστε ο χρήστης να μπορεί οποιαδήποτε στιγμή να δει φορτιστές, τιμές ή να κάνει κράτηση.
+
+Μικρής διάρκειας διακοπές επιτρέπονται μόνο για τεχνική συντήρηση ή αναβάθμιση. Σε αυτές τις περιπτώσεις πρέπει να εμφανίζεται ενημερωτικό μήνυμα στον χρήστη.
+
+
+Σε περίπτωση προσωρινής βλάβης (π.χ. διακοπή δικτύου), η εφαρμογή πρέπει να επανέρχεται ομαλά μόλις το backend λειτουργήσει ξανά.
+
+
+Η mobile εφαρμογή μπορεί να δείχνει προσωρινά αποθηκευμένες πληροφορίες για κοντινούς φορτιστές όταν δεν υπάρχει σύνδεση.
+
+
+Το σύστημα πρέπει να μπορεί να εξυπηρετεί πολλαπλούς χρήστες ταυτόχρονα χωρίς σημαντικές καθυστερήσεις στις βασικές λειτουργίες.
+
 
 ### 3.5.2 Security
 - Το σύστημα μπορεί να περιορίσει πόσες ενεργές κρατήσεις μπορεί να κάνει ένας ανώνυμος χρήστης
-[  
-    - security requirements and justification       
-]
+Η επικοινωνία χρήστη–backend πρέπει να είναι κρυπτογραφημένη.
+
+
+Τα στοιχεία πληρωμής δεν αποθηκεύονται στο σύστημα, μόνο tokens από τον πάροχο πληρωμών.
+
+
+Σημαντικές ενέργειες (π.χ. αποτυχημένες συνδέσεις) πρέπει να καταγράφονται.
+
+
+Τα προσωπικά δεδομένα προστατεύονται και χρησιμοποιούνται μόνο όσο χρειάζεται για την υπηρεσία
