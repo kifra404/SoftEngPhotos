@@ -325,7 +325,7 @@ BE --> EXT
 ]
 
 ### 3.4.2 Semantic data model
-![ER][https://raw.githubusercontent.com/kifra404/SoftEngPhotos/main/ER.png]
+![ER](https://github.com/kifra404/SoftEngPhotos/blob/main/ER.png)
 
 ## 3.5 Other requirements
 [  
