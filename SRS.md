@@ -34,7 +34,6 @@
 ![Component Diagram with External Interfaces](https://github.com/kifra404/SoftEngPhotos/blob/main/comp.png?raw=true)
 
 #### 1.2.2 Διεπαφές χρήστη
-Οι χρήστες (οδηγοί ηλεκτρικών οχημάτων και οι διαχειριστές) μπορούν να έχουν πρόσβαση με τις παρακάτω διεπαφές:
 - Web εφαρμογή μέσω περιηγητή browser
 - Mobile Web Διεπαφή
 - Command Line Interface (CLI) δηλαδή διενέργεια ερωτημάτων σε περιβάλλον γραμμής εντολών
@@ -64,13 +63,12 @@
 
 ![Succesful Payment](https://github.com/kifra404/SoftEngPhotos/blob/main/Wireframe(6).png?raw=true)
 
-[- Flow between screens, etc.]
-
 ## 2. Αναφορές - πηγές πληροφοριών
-[  
-    - Links to information sources.  
-    - Glossary of terms  
-]
+- [ΔΕΗ Blue](https://www.deiblue.gr/el/diktyo)
+- [Charging.gr](https://www.charging.gr/)
+- [Gridserve] (https://www.gridserve.com/how-does-an-electric-vehicle-ev-charger-actually-work/)
+- [Autonomous] (https://www.autonomous.gr/stathmoi-fortisis-ilektrikon-ochimaton-stin-ellada/)
+- [GOV] (https://electrokinisi.yme.gov.gr/public/ChargingPoints/)
 
 ## 3. Προδιαγραφές απαιτήσεων λογισμικού
 Το υποσύστημα διαχείρισης φορτιστών και συνεδριών φόρτισης υποστηρίζει τρεις βασικές περιπτώσεις χρήσης:  
@@ -83,10 +81,10 @@
 ### 3.1 Περιπτώσεις χρήσης
 
 #### 3.1.1 Περίπτωση χρήσης 1: Προβολή φορτιστών
-[short description of the use case]
+Το use case αυτό περιγράφει τη διαδικασία μέσω της οποίας ο πελάτης εντοπίζει και αναζητά διαθέσιμους φορτιστές, βλέπει την τοποθεσία, την κατάστασή τους και τις τρέχουσες τιμές, χρησιμοποιώντας τη web ή mobile εφαρμογή.
 
 ##### 3.1.1.1 Ρόλοι που εμπλέκονται
-- Πελάτης
+- Πελάτης (customer)
 
 ##### 3.1.1.2 Προϋποθέσεις εκτέλεσης
 - Ο χρήστης έχει πρόσβαση στην εφαρμογή (web ή mobile)
@@ -156,11 +154,13 @@
 ##### 3.1.1.7 Παρατηρήσεις
 Η τιμή (€/kWh) μεταβάλλεται δυναμικά και θα λαμβάνεται από API. Αλλάζει με βάση την ώρα, την τοποθεσία, κλπ.
 
+
+
 #### 3.1.2 Περίπτωση χρήσης 2: Δέσμευση φορτιστή
-[short description of the use case]
+Το δεύτερο use case περιγράφει τα βήματα που ακολουθεί ο πελάτης ώστε να δεσμεύσει έναν διαθέσιμο φορτιστή για συγκεκριμένο χρονικό διάστημα. Το σύστημα καταχωρεί την κράτηση και εαν είναι εφικτό δεσμεύει τον φορτιστή. 
 
 ##### 3.1.2.1 Ρόλοι που εμπλέκονται
-- Customer (Πελάτης)
+- Πελάτης (customer)
 
 ##### 3.1.2.2 Προϋποθέσεις εκτέλεσης
 - Ο πελάτης έχει πρόσβαση στην εφαρμογή
@@ -214,9 +214,11 @@
     Το σύστημα εμφανίζει μήνυμα σφάλματος “Η κράτηση δεν μπόρεσε να ολοκληρωθεί”
 
 Ακολουθεί το Activity Diagram για το UC2:
+
 ![UC2 Activity Diagram_1](https://github.com/kifra404/SoftEngPhotos/blob/main/act2.png?raw=true)
 
 Στη συνέχεια, ακολουθεί το Sequence Diagram για το UC2:
+
 ![UC2 Sequence Diagram](https://github.com/kifra404/SoftEngPhotos/blob/main/sec2.png?raw=true)
 
 ##### 3.1.2.6 Δεδομένα εξόδου
@@ -224,6 +226,7 @@
 - Εμφανιζόμενη επιβεβαίωση στον χρήστη
 
 Παρακάτω βρίσκεται το Sequence Diagram παραγωγής δεδομένων για το UC2:
+
 ![UC2 Sequence Diagram Out](https://github.com/kifra404/SoftEngPhotos/blob/main/sec2out.png?raw=true)
 
 ##### 3.1.2.7 Παρατηρήσεις
@@ -233,10 +236,10 @@
 - Εξωτερικό σύστημα πληρωμών δεν εμπλέκεται σε αυτό το βήμα (μόνο στην ενεργοποίηση φόρτισης)
 
 #### 3.1.3 Περίπτωση χρήσης 3: Επεξεργασία λογαριασμού και μεθόδου πληρωμών
-[short description of the use case]
+Το use case περιγράφει τον τρόπο με τον οποίο ο πελάτης πραγματοποιεί πληρωμές μέσω της εφαρμογής, εισάγοντας στοιχεία κάρτας ή wallet τα οποία ελέγχονται και εγκρίνονται από εξωτερικό Payment Provider. Το σύστημα επικοινωνεί με τις backend υπηρεσίες ώστε να διασφαλίζει την εγκυρότητα των δεδομένων για την παραχώρηση του payment token.
 
 ##### 3.1.3.1 Ρόλοι που εμπλέκονται
-- Customer (Πελάτης)
+- Πελάτης (customer)
 
 ##### 3.1.3.2 Προϋποθέσεις εκτέλεσης
 - Ο χρήστης έχει πρόσβαση στην εφαρμογή
